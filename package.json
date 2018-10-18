@@ -1,0 +1,18 @@
+{
+   "name": "graphql-ts-server-boilerplate",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "ts-node": "7.0.1",
+      "@types/node": "^10.12.0",
+      "typescript": "3.1.3"
+   },
+   "dependencies": {
+      "typeorm": "0.2.7",
+      "reflect-metadata": "^0.1.12",
+      "mysql": "^2.16.0"
+   },
+   "scripts": {
+      "start": "ts-node src/index.ts"
+   }
+}
