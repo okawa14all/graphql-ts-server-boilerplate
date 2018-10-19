@@ -1,10 +1,11 @@
 {
    "type": "mysql",
-   "host": "localhost",
+   "host": "127.0.0.1",
    "port": 3306,
-   "username": "test",
-   "password": "test",
-   "database": "test",
+   "username": "root",
+   "password": "",
+   "database": "graphql_ts_server_boilerplate",
+   "charset": "utf8mb4",
    "synchronize": true,
    "logging": false,
    "entities": [
