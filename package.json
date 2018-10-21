@@ -4,6 +4,7 @@
    "description": "Awesome project developed with TypeORM.",
    "devDependencies": {
       "@types/node": "^10.12.0",
+      "@types/uuid": "^3.4.4",
       "nodemon": "^1.18.4",
       "ts-node": "7.0.1",
       "tslint": "^5.11.0",
@@ -14,7 +15,8 @@
       "graphql-yoga": "^1.16.7",
       "mysql": "^2.16.0",
       "reflect-metadata": "^0.1.12",
-      "typeorm": "0.2.7"
+      "typeorm": "0.2.7",
+      "uuid": "^3.3.2"
    },
    "scripts": {
       "start": "nodemon --exec ts-node src/index.ts"
