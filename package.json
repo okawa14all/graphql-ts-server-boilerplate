@@ -3,6 +3,7 @@
    "version": "0.0.1",
    "description": "Awesome project developed with TypeORM.",
    "devDependencies": {
+      "@types/bcryptjs": "^2.4.2",
       "@types/node": "^10.12.0",
       "@types/uuid": "^3.4.4",
       "gql2ts": "^1.10.1",
