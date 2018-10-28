@@ -7,7 +7,7 @@
    "database": "graphql_ts_server_boilerplate",
    "charset": "utf8mb4",
    "synchronize": true,
-   "logging": false,
+   "logging": true,
    "entities": [
       "src/entity/**/*.ts"
    ],
