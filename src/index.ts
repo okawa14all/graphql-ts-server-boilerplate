@@ -1,4 +1,4 @@
 import "reflect-metadata";
-import { startServer } from "./utils/startServer";
+import { startServer } from "./startServer";
 
 startServer();
