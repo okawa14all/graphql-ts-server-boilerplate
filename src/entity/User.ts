@@ -1,9 +1,4 @@
-import {
-  Entity,
-  Column,
-  BaseEntity,
-  PrimaryGeneratedColumn
-} from 'typeorm';
+import { Entity, Column, BaseEntity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('users')
 export class User extends BaseEntity {
@@ -15,4 +10,7 @@ export class User extends BaseEntity {
 
   @Column('varchar', { length: 255 })
   password: string;
+
+  @Column('boolean', { default: false })
+  confirmed: boolean;
 }
