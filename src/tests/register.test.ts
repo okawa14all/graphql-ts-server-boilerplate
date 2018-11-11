@@ -12,7 +12,7 @@ beforeAll(async () => {
 });
 
 const email = 'bob@bob.com';
-const password = 'fefefefe';
+const password = 'fe';
 
 const mutation = `
 mutation {
