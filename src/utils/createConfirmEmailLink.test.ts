@@ -23,30 +23,22 @@ afterAll(async () => {
   conn.close();
 });
 
-describe('test createConfirmEmailLink', () => {
-  test('Make sure it confirm user and clears key in redis', async () => {
-    const url = await createConfirmEmailLink(
-      process.env.TEST_HOST as string,
-      userId,
-      redis
-    );
+test('Make sure it confirm user and clears key in redis', async () => {
+  const url = await createConfirmEmailLink(
+    process.env.TEST_HOST as string,
+    userId,
+    redis
+  );
 
-    const response = await fetch(url);
-    const text = await response.text();
-    expect(text).toEqual('ok');
+  const response = await fetch(url);
+  const text = await response.text();
+  expect(text).toEqual('ok');
 
-    const user = await User.findOne({ where: { id: userId } });
-    expect((user as User).confirmed).toBeTruthy();
+  const user = await User.findOne({ where: { id: userId } });
+  expect((user as User).confirmed).toBeTruthy();
 
-    const chunks = url.split('/');
-    const key = chunks[chunks.length - 1];
-    const value = await redis.get(key);
-    expect(value).toBeNull();
-  });
-
-  test('sends invalid back if bad key', async () => {
-    const response = await fetch(`${process.env.TEST_HOST}/confirm/1234`);
-    const text = await response.text();
-    expect(text).toEqual('invalid');
-  });
+  const chunks = url.split('/');
+  const key = chunks[chunks.length - 1];
+  const value = await redis.get(key);
+  expect(value).toBeNull();
 });
