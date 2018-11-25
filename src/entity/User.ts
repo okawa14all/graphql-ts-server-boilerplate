@@ -11,6 +11,6 @@ export class User extends BaseEntity {
   @Column('varchar', { length: 255 })
   password: string;
 
-  @Column('boolean', { default: false })
+  @Column('tinyint', { default: 0 })
   confirmed: boolean;
 }
